@@ -34,6 +34,7 @@ end
 
 def draw?(board)
   if !won?(board) && full?(board)
+    puts won?(board)
     return true
   elsif !won?(board) && !full?(board) || !won?(board)
     return false
