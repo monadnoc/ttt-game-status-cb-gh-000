@@ -17,6 +17,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   win = false
+  winna = []
   empty_board = board.all? {|x| x == " "}
   WIN_COMBINATIONS.each do |combo|
     if empty_board
@@ -46,4 +47,12 @@ def over?(board)
   else
     return false
   end
+end
+
+def winner(board)
+  winner = []
+  if !(won?(board) == false)
+    winner = board[won?(board)[0]]
+  end
+  return winner
 end
