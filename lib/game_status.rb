@@ -19,7 +19,7 @@ def won?(board)
   win = []
   empty_board = board.all? {|x| x == " "}
   WIN_COMBINATIONS.each do |combo|
-    if empty_board || draw?(board)
+    if empty_board
       return false
     elsif combo.all? { |value| board[value] =="X" } || combo.all? { |value| board[value] =="O" }
       win = combo
@@ -34,8 +34,6 @@ end
 
 def draw?(board)
   if (won?(board) == false) && full?(board)
-    puts won?(board)
-    puts full?(board)
     return true
   elsif !(won?(board) == false) && !full?(board) || !won?(board)
     return false
