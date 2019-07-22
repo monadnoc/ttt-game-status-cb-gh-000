@@ -16,7 +16,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  win = []
+  win = false
   empty_board = board.all? {|x| x == " "}
   WIN_COMBINATIONS.each do |combo|
     if empty_board
