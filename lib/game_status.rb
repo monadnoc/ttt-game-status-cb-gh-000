@@ -16,9 +16,9 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
+  win = []
+  empty_board = board.all? {|x| x == " "}
   WIN_COMBINATIONS.each do |combo|
-    win = []
-    empty_board = board.all? {|x| x == " "}
     if empty_board || full?(board)
       return false
     elsif combo.all? { |value| board[value] =="X" } || combo.all? { |value| board[value] =="O" }
