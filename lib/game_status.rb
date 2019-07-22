@@ -25,7 +25,7 @@ def won?(board)
       win = combo
     end
   end
-  win
+  return win
 end
 
 def full?(board)
