@@ -21,7 +21,7 @@ def won?(board)
     empty_board = board.all? {|x| x == " "}
     if empty_board || full?(board)
       return false
-    elsif combo.all? { |value| board[value] =="X" } || sub_array.all? { |value| board[value] =="O" }
+    elsif combo.all? { |value| board[value] =="X" } || combo.all? { |value| board[value] =="O" }
       win = combo
     end
   end
