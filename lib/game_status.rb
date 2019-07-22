@@ -19,9 +19,9 @@ def won?(board)
   WIN_COMBINATIONS.each do |combo|
     # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
     # grab each index from the win_combination that composes a win
-    win_index_1 = win_combination[0]
-    win_index_2 = win_combination[1]
-    win_index_3 = win_combination[2]
+    win_index_1 = combo[0]
+    win_index_2 = combo[1]
+    win_index_3 = combo[2]
 
     position_1 = board[win_index_1] # load the value of the board at win_index_1
     position_2 = board[win_index_2] # load the value of the board at win_index_2
